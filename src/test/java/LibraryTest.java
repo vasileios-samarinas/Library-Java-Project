@@ -14,6 +14,7 @@ public class LibraryTest {
         book=new Book("Harry Potter and the Goblet of Fire","J.K. Rowling","Fantasy");
     }
 
+
     @Test
     public void libraryStartsEmpty(){
         assertEquals(0,library.countBooks());
@@ -31,5 +32,13 @@ public class LibraryTest {
         library.addBook(book);
         assertEquals(1,library.countBooks());
     }
+
+    @Test
+    public void libraryLentBookToBorrower(){
+        library.addBook(book);
+        Book newBook= library.removeBook();
+        assertEquals(book,newBook);
+    }
+
 
 }

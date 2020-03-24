@@ -24,4 +24,11 @@ public class Library {
         return this.capacity > countBooks();
     }
 
+    public Book removeBook() {
+        if (countBooks()==0){
+            return null;
+        }else{
+            return this.books.remove(0);
+        }
+    }
 }
